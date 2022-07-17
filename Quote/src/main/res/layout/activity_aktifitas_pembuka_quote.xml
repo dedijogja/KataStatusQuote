@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/duwor"
+        android:background="#2c3e50"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/tombolKembali"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/btnBackPembukaQuote"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textOpenQuotes"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"
+            android:text="Pembuka Quote"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="#7f8c8d"
+        android:layout_above="@+id/adsPembuka"
+        android:layout_below="@+id/duwor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <RelativeLayout
+            android:layout_marginBottom="75dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/btnPrev"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="120dp"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:src="@drawable/prev"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:id="@+id/btnNex"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="120dp"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:src="@drawable/next"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="#ecf0f1"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:id="@+id/textPembuka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginRight="80dp">
+            <SeekBar
+                android:id="@+id/seekBarPembuka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:max="49" />
+        </LinearLayout>
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/menu_red"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            fab:menu_labels_ellipsize="end"
+            fab:menu_labels_singleLine="true"
+            fab:menu_backgroundColor="#ccffffff"
+            fab:menu_shadowColor="#444"
+            fab:menu_colorNormal="#9b59b6"
+            fab:menu_colorPressed="#8e44ad"
+            fab:menu_colorRipple="#8e44ad"
+            fab:menu_fab_label="Tutup Menu">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btnGenerateImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/buat_gambar"
+                fab:fab_size="mini"
+                fab:fab_label="Buat Gambar" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btnCopyToClipBoard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/salin_teks"
+                fab:fab_size="mini"
+                fab:fab_label="Salin Teks" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btnShareText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/kirim_teks"
+                fab:fab_size="mini"
+                fab:fab_label="Kirim Teks" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btnTambahkanKeBookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tambah_bookmark"
+                fab:fab_size="mini"
+                fab:fab_label="Tambahkan Ke Bookmark" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/adsPembuka"
+        android:background="#2c3e50"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

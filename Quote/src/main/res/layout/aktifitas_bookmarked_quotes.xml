@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#34495e">
+
+
+    <LinearLayout
+        android:id="@+id/duwor"
+        android:background="#2c3e50"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/tombolKembali"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/btnBackBookmarkedQuote"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+        </LinearLayout>
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"
+            android:text="Bookmarked Quotes"/>
+
+        <LinearLayout
+            android:id="@+id/btnRefresh"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/btnRefreshImage"
+                android:layout_marginLeft="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/duwor"
+        android:id="@+id/quotesRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>

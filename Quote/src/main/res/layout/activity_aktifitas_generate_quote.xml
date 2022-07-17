@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#34495e">
+
+
+    <LinearLayout
+        android:id="@+id/duwor"
+        android:background="#2c3e50"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/tombolKembali"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/btnBackGenerateCustomQuote"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+        </LinearLayout>
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"
+            android:text="Buat Custom Quote"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@+id/duwor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adsBannerGenerate"
+        >
+
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginBottom="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.sutinidevlab.help.KotakLayout
+                    android:id="@+id/kotakLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/imageBG"
+                        android:scaleType="fitXY"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textGenerateQuote"
+                            android:textColor="#ecf0f1"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:textSize="25sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <ImageView
+                        android:alpha=".4"
+                        android:src="@drawable/ttd"
+                        android:visibility="gone"
+                        android:id="@+id/imageTTD"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitXY"/>
+                </com.sutinidevlab.help.KotakLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginRight="80dp">
+                <SeekBar
+                    android:id="@+id/seekBarGenerateQuote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:max="49" />
+            </LinearLayout>
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/menu_red_generate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                fab:menu_labels_ellipsize="end"
+                fab:menu_labels_singleLine="true"
+                fab:menu_backgroundColor="#ccffffff"
+                fab:menu_shadowColor="#444"
+                fab:menu_colorNormal="#9b59b6"
+                fab:menu_colorPressed="#8e44ad"
+                fab:menu_colorRipple="#8e44ad"
+                fab:menu_fab_label="Tutup Menu">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnSimpanGambar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/simpan_gambar"
+                    fab:fab_size="mini"
+                    fab:fab_label="Simpan Gambar" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnBagikanGambar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/kirim_teks"
+                    fab:fab_size="mini"
+                    fab:fab_label="Bagikan Gambar" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnAturSebagai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/atur_sebagai"
+                    fab:fab_size="mini"
+                    fab:fab_label="Atur Sebagai..." />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnUbahWarnaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ubah_warna"
+                    fab:fab_size="mini"
+                    fab:fab_label="Ubah Warna Font" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnUbahText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ubah_teks"
+                    fab:fab_size="mini"
+                    fab:fab_label="Ubah Teks" />
+
+            </com.github.clans.fab.FloatingActionMenu>
+        </RelativeLayout>
+
+        <Gallery
+            android:id="@+id/galeri"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+     </LinearLayout>
+
+
+    <LinearLayout
+        android:background="#1abc9c"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/adsBannerGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:orientation="horizontal" />
+</RelativeLayout>
